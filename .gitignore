@@ -1,0 +1,18 @@
+# 의존성
+node_modules/
+/pnp.js
+.pnp.*
+
+# 빌드 · 로그
+dist/
+build/
+.next/
+*.log
+
+# 환경 · 보안
+.env
+.env.local
+
+# OS · 에디터
+.DS_Store
+.vscode/
