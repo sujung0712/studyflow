@@ -88,7 +88,7 @@ export function QuestionListView({
       <div className="mb-5 flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-4 lg:flex-row lg:items-center lg:justify-between">
         <div
           className="flex flex-wrap items-center gap-2"
-          role="tablist"
+          role="group"
           aria-label="질문 상태 필터"
         >
           {STATUS_FILTERS.map((status) => {
@@ -97,8 +97,7 @@ export function QuestionListView({
               <button
                 key={status}
                 type="button"
-                role="tab"
-                aria-selected={isActive}
+                aria-pressed={isActive}
                 onClick={() => setSelectedStatus(status)}
                 className={`inline-flex items-center gap-2 rounded-lg border px-3 py-1.5 text-sm font-medium transition ${
                   isActive
@@ -192,8 +191,8 @@ export function QuestionListView({
 
                 {question.answer && (
                   <div className="mt-4 rounded-lg border border-[#10B981]/20 bg-[#10B981]/5 p-4">
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#10B981]">
-                      <CheckCircle2 className="h-4 w-4" />
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-[#047857]">
+                      <CheckCircle2 className="h-4 w-4 text-[#10B981]" />
                       답변 정리
                     </div>
                     <p className="mt-1.5 text-sm leading-relaxed text-[#1E293B]">

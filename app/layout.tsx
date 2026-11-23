@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Header, Sidebar } from "@/components";
+import { AppShell } from "@/components";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -17,13 +17,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="ko">
       <body className="bg-[#F8FAFC] text-[#1E293B] antialiased">
-        <div className="flex min-h-screen">
-          <Sidebar />
-          <div className="flex min-w-0 flex-1 flex-col">
-            <Header />
-            <main className="flex-1 bg-[#F8FAFC] p-6 lg:p-8">{children}</main>
-          </div>
-        </div>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );

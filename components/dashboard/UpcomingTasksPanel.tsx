@@ -62,7 +62,7 @@ export function UpcomingTasksPanel({ entries }: UpcomingTasksPanelProps) {
         <div className="flex flex-wrap items-center gap-3">
           <div
             className="inline-flex rounded-lg border border-slate-200 bg-[#F8FAFC] p-1"
-            role="tablist"
+            role="group"
             aria-label="다가오는 과제 상태 필터"
           >
             {FILTER_OPTIONS.map((option) => {
@@ -72,8 +72,7 @@ export function UpcomingTasksPanel({ entries }: UpcomingTasksPanelProps) {
                 <button
                   key={option}
                   type="button"
-                  role="tab"
-                  aria-selected={isSelected}
+                  aria-pressed={isSelected}
                   onClick={() => setSelectedFilter(option)}
                   className={`inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-medium transition ${
                     isSelected

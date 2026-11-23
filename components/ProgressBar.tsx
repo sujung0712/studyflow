@@ -22,7 +22,7 @@ export function ProgressBar({
   const clamped = Math.min(100, Math.max(0, Math.round(value)));
   const isCompleted = clamped >= 100;
   const barColor = isCompleted ? "bg-[#10B981]" : "bg-[#2563EB]";
-  const textColor = isCompleted ? "text-[#10B981]" : "text-[#2563EB]";
+  const textColor = isCompleted ? "text-[#047857]" : "text-[#2563EB]";
 
   return (
     <div className={`w-full ${className}`.trim()}>

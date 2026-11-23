@@ -2,7 +2,12 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { CheckSquare } from "lucide-react";
+import { CheckSquare, Menu } from "lucide-react";
+
+export interface HeaderProps {
+  onMenuOpen?: () => void;
+  isMenuOpen?: boolean;
+}
 
 interface HeaderMeta {
   title: string;
@@ -59,23 +64,37 @@ function getHeaderMeta(pathname: string): HeaderMeta {
   };
 }
 
-export function Header() {
+export function Header({ onMenuOpen, isMenuOpen = false }: HeaderProps) {
   const pathname = usePathname();
   const { title, subtitle } = getHeaderMeta(pathname);
 
   return (
-    <header className="sticky top-0 z-20 flex h-16 shrink-0 items-center justify-between gap-4 border-b border-slate-200 bg-white px-6 lg:px-8">
-      <div className="min-w-0">
-        <h1 className="truncate text-lg font-bold tracking-tight text-[#1E293B]">
-          {title}
-        </h1>
-        <p className="truncate text-xs text-slate-500">{subtitle}</p>
+    <header className="sticky top-0 z-20 flex h-16 shrink-0 items-center justify-between gap-3 border-b border-slate-200 bg-white px-4 sm:px-6 lg:px-8">
+      <div className="flex min-w-0 items-center gap-3">
+        {onMenuOpen && (
+          <button
+            type="button"
+            onClick={onMenuOpen}
+            aria-label="메뉴 열기"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-sidebar"
+            className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-slate-200 text-[#1E293B] transition hover:bg-slate-50 md:hidden"
+          >
+            <Menu className="h-5 w-5" />
+          </button>
+        )}
+        <div className="min-w-0">
+          <h1 className="truncate text-lg font-bold tracking-tight text-[#1E293B]">
+            {title}
+          </h1>
+          <p className="truncate text-xs text-slate-500">{subtitle}</p>
+        </div>
       </div>
 
       <div className="flex shrink-0 items-center gap-3">
         <Link
           href="/tasks"
-          className="inline-flex items-center gap-1.5 rounded-lg bg-[#2563EB] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-[#1D4ED8]"
+          className="inline-flex items-center gap-1.5 rounded-lg bg-[#2563EB] px-3 py-2 text-xs font-semibold text-white transition hover:bg-[#1D4ED8] sm:px-3.5"
         >
           <CheckSquare className="h-3.5 w-3.5" />
           과제 보기

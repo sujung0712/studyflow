@@ -47,7 +47,7 @@ export function CourseListView({ items }: CourseListViewProps) {
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <div
           className="inline-flex flex-wrap items-center gap-2"
-          role="tablist"
+          role="group"
           aria-label="강의 진행 상태 필터"
         >
           {FILTER_OPTIONS.map((filter) => {
@@ -56,8 +56,7 @@ export function CourseListView({ items }: CourseListViewProps) {
               <button
                 key={filter}
                 type="button"
-                role="tab"
-                aria-selected={isActive}
+                aria-pressed={isActive}
                 onClick={() => setSelectedFilter(filter)}
                 className={`inline-flex items-center gap-2 rounded-lg border px-3.5 py-2 text-sm font-medium transition ${
                   isActive

@@ -49,7 +49,7 @@ export default function HomePage() {
     .filter(
       (task) =>
         task.status !== "완료" &&
-        (task.dueDate === TODAY_DATE || task.status === "진행 중")
+        (task.dueDate <= TODAY_DATE || task.status === "진행 중")
     )
     .sort((a, b) => a.dueDate.localeCompare(b.dueDate));
 
@@ -173,7 +173,7 @@ export default function HomePage() {
               </span>
             </div>
             <p className="mt-1 text-xs text-slate-500">
-              오늘 마감 예정이거나 현재 진행 중인 과제입니다.
+              오늘 마감·기한 경과 또는 현재 진행 중인 과제입니다.
             </p>
           </div>
 

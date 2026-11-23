@@ -38,17 +38,30 @@ export function getCourseTitleById(courseId: string): string {
   return getCourseById(courseId)?.title ?? "미지정 강의";
 }
 
-function parseUtcDate(dateString: string): number {
-  const [yearStr, monthStr, dayStr] = dateString.split("-");
-  const year = Number(yearStr);
-  const month = Number(monthStr);
-  const day = Number(dayStr);
+const ISO_DATE_PATTERN = /^(\d{4})-(\d{2})-(\d{2})$/;
 
-  if (Number.isNaN(year) || Number.isNaN(month) || Number.isNaN(day)) {
+function parseUtcDate(dateString: string): number {
+  const match = ISO_DATE_PATTERN.exec(dateString.trim());
+  if (!match) {
     return NaN;
   }
 
-  return Date.UTC(year, month - 1, day);
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+
+  const utcTime = Date.UTC(year, month - 1, day);
+  const parsed = new Date(utcTime);
+
+  if (
+    parsed.getUTCFullYear() !== year ||
+    parsed.getUTCMonth() !== month - 1 ||
+    parsed.getUTCDate() !== day
+  ) {
+    return NaN;
+  }
+
+  return utcTime;
 }
 
 export function getDueDateLabel(
@@ -59,7 +72,7 @@ export function getDueDateLabel(
   const refUtc = parseUtcDate(referenceDate);
 
   if (Number.isNaN(dueUtc) || Number.isNaN(refUtc)) {
-    return dueDate;
+    return "일정 미정";
   }
 
   const diffDays = Math.round((dueUtc - refUtc) / (1000 * 60 * 60 * 24));

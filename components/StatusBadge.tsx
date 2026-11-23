@@ -18,7 +18,7 @@ const STATUS_STYLES: Record<
     dot: "bg-[#2563EB]",
   },
   완료: {
-    container: "bg-[#10B981]/10 text-[#10B981] border-[#10B981]/20",
+    container: "bg-[#10B981]/10 text-[#047857] border-[#10B981]/25",
     dot: "bg-[#10B981]",
   },
 };

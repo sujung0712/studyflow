@@ -60,7 +60,7 @@ export default function TasksPage() {
         <div className="flex items-center justify-between rounded-xl border border-slate-200 bg-white p-5">
           <div>
             <p className="text-xs font-medium text-slate-500">완료된 과제</p>
-            <p className="mt-1.5 text-2xl font-bold tabular-nums text-[#10B981]">
+            <p className="mt-1.5 text-2xl font-bold tabular-nums text-[#047857]">
               {completedTasks}
               <span className="ml-1 text-sm font-medium text-slate-500">
                 개

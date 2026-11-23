@@ -85,7 +85,7 @@ export default function DashboardPage() {
       helper: `과제 완료율 ${taskCompletionRate}%`,
       icon: CheckCircle2,
       iconBg: "bg-[#10B981]/10 text-[#10B981]",
-      valueColor: "text-[#10B981]",
+      valueColor: "text-[#047857]",
     },
     {
       label: "진행 중 과제",
@@ -173,7 +173,7 @@ export default function DashboardPage() {
             </div>
             <div className="rounded-lg border border-slate-200 bg-[#F8FAFC] px-3.5 py-2">
               <span className="block text-slate-500">수강 완료 과목</span>
-              <span className="mt-0.5 block text-sm font-bold text-[#10B981] tabular-nums">
+              <span className="mt-0.5 block text-sm font-bold text-[#047857] tabular-nums">
                 {completedCoursesCount} / {courses.length}과목
               </span>
             </div>
@@ -412,7 +412,7 @@ export default function DashboardPage() {
                 {unresolvedQuestionCount}건
               </strong>{" "}
               · 해결 완료{" "}
-              <strong className="font-semibold text-[#10B981]">
+              <strong className="font-semibold text-[#047857]">
                 {resolvedQuestionCount}건
               </strong>
             </p>

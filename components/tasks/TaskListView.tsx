@@ -72,7 +72,7 @@ export function TaskListView({ tasks, courses }: TaskListViewProps) {
       <div className="mb-5 flex flex-col gap-3 rounded-xl border border-slate-200 bg-white p-4 lg:flex-row lg:items-center lg:justify-between">
         <div
           className="flex flex-wrap items-center gap-2"
-          role="tablist"
+          role="group"
           aria-label="과제 상태 필터"
         >
           {STATUS_FILTERS.map((status) => {
@@ -81,8 +81,7 @@ export function TaskListView({ tasks, courses }: TaskListViewProps) {
               <button
                 key={status}
                 type="button"
-                role="tab"
-                aria-selected={isActive}
+                aria-pressed={isActive}
                 onClick={() => setSelectedStatus(status)}
                 className={`inline-flex items-center gap-2 rounded-lg border px-3 py-1.5 text-sm font-medium transition ${
                   isActive

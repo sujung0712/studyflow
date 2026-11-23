@@ -1,9 +1,13 @@
+export { AppShell } from "./AppShell";
+export type { AppShellProps } from "./AppShell";
 export { CourseCard } from "./CourseCard";
 export type { CourseCardProps } from "./CourseCard";
 export { Header } from "./Header";
+export type { HeaderProps } from "./Header";
 export { ProgressBar } from "./ProgressBar";
 export type { ProgressBarProps } from "./ProgressBar";
 export { Sidebar } from "./Sidebar";
+export type { SidebarProps } from "./Sidebar";
 export { StatusBadge } from "./StatusBadge";
 export type { StatusBadgeProps } from "./StatusBadge";
 export { TaskItem } from "./TaskItem";

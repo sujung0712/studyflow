@@ -15,8 +15,21 @@ export function TaskItem({
   courseTitle,
   showCourse = true,
 }: TaskItemProps) {
-  const dueLabel = getDueDateLabel(task.dueDate);
-  const isDueToday = dueLabel === "오늘 마감" && task.status !== "완료";
+  const isCompleted = task.status === "완료";
+  const dueLabel = isCompleted ? "완료됨" : getDueDateLabel(task.dueDate);
+  const isOverdue = !isCompleted && dueLabel === "마감 지남";
+  const isDueToday = !isCompleted && dueLabel === "오늘 마감";
+
+  let dueLabelClassName = "text-slate-600";
+  if (isCompleted) {
+    dueLabelClassName = "font-medium text-[#047857]";
+  } else if (isOverdue) {
+    dueLabelClassName =
+      "rounded bg-[#1E293B] px-1.5 py-0.5 font-semibold text-white";
+  } else if (isDueToday) {
+    dueLabelClassName =
+      "rounded bg-[#2563EB]/10 px-1.5 py-0.5 font-semibold text-[#2563EB]";
+  }
 
   return (
     <Link
@@ -42,13 +55,7 @@ export function TaskItem({
           <span className="text-slate-300" aria-hidden="true">
             ·
           </span>
-          <span
-            className={
-              isDueToday ? "font-semibold text-[#2563EB]" : "text-slate-600"
-            }
-          >
-            {dueLabel}
-          </span>
+          <span className={dueLabelClassName}>{dueLabel}</span>
         </div>
       </div>
 
