@@ -1,0 +1,187 @@
+{
+  "courses": [
+    {
+      "id": "course-1",
+      "title": "자료구조",
+      "instructor": "김민수 교수",
+      "semester": "2026-2",
+      "progress": 75,
+      "description": "배열, 연결 리스트, 스택, 큐, 트리, 그래프 등 핵심 자료구조의 원리와 시간 복잡도를 학습합니다.",
+      "credits": 3,
+      "schedule": "월·수 10:30 - 12:00",
+      "totalLessons": 16,
+      "completedLessons": 12
+    },
+    {
+      "id": "course-2",
+      "title": "운영체제",
+      "instructor": "이서연 교수",
+      "semester": "2026-2",
+      "progress": 50,
+      "description": "프로세스 관리, CPU 스케줄링, 동기화, 교착 상태, 가상 메모리 등 운영체제 핵심 구조를 다룹니다.",
+      "credits": 3,
+      "schedule": "화·목 13:30 - 15:00",
+      "totalLessons": 16,
+      "completedLessons": 8
+    },
+    {
+      "id": "course-3",
+      "title": "데이터베이스",
+      "instructor": "박지훈 교수",
+      "semester": "2026-2",
+      "progress": 100,
+      "description": "관계형 데이터 모델, SQL 질의 최적화, 정규화, 트랜잭션과 동시성 제어 기법을 익힙니다.",
+      "credits": 3,
+      "schedule": "월·수 15:00 - 16:30",
+      "totalLessons": 14,
+      "completedLessons": 14
+    },
+    {
+      "id": "course-4",
+      "title": "소프트웨어공학",
+      "instructor": "최유진 교수",
+      "semester": "2026-2",
+      "progress": 35,
+      "description": "요구사항 분석, 객체지향 설계, 애자일 개발 프로세스, 테스트 및 품질 관리 방법론을 학습합니다.",
+      "credits": 3,
+      "schedule": "화·목 10:30 - 12:00",
+      "totalLessons": 20,
+      "completedLessons": 7
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-1",
+      "courseId": "course-1",
+      "title": "이진 탐색 트리 구현 과제",
+      "dueDate": "2026-11-23",
+      "status": "진행 중",
+      "description": "삽입, 삭제, 중위 순회 기능을 포함한 이진 탐색 트리를 구현하고 테스트 케이스를 작성합니다.",
+      "priority": "높음"
+    },
+    {
+      "id": "task-2",
+      "courseId": "course-2",
+      "title": "CPU 스케줄링 알고리즘 비교 보고서",
+      "dueDate": "2026-11-23",
+      "status": "시작 전",
+      "description": "FCFS, SJF, Round Robin 알고리즘의 평균 대기 시간과 응답 시간을 비교 정리합니다.",
+      "priority": "높음"
+    },
+    {
+      "id": "task-3",
+      "courseId": "course-1",
+      "title": "연결 리스트와 스택 실습",
+      "dueDate": "2026-11-24",
+      "status": "완료",
+      "description": "단일 연결 리스트 기반 스택을 구현하고 괄호 검사 예제를 검증합니다.",
+      "priority": "보통"
+    },
+    {
+      "id": "task-4",
+      "courseId": "course-3",
+      "title": "정규화 및 ERD 설계 과제",
+      "dueDate": "2026-11-25",
+      "status": "완료",
+      "description": "도서 대출 시스템 요구사항을 분석하여 3NF 수준의 ERD와 테이블 명세를 작성합니다.",
+      "priority": "보통"
+    },
+    {
+      "id": "task-5",
+      "courseId": "course-2",
+      "title": "교착 상태 회피 시뮬레이션",
+      "dueDate": "2026-11-26",
+      "status": "진행 중",
+      "description": "은행원 알고리즘을 구현해 안전 상태 판별 과정을 단계별로 출력합니다.",
+      "priority": "높음"
+    },
+    {
+      "id": "task-6",
+      "courseId": "course-3",
+      "title": "인덱스 성능 분석 리포트",
+      "dueDate": "2026-11-27",
+      "status": "완료",
+      "description": "복합 인덱스 적용 전후의 실행 계획과 조회 응답 속도 차이를 측정해 제출합니다.",
+      "priority": "낮음"
+    },
+    {
+      "id": "task-7",
+      "courseId": "course-4",
+      "title": "요구사항 명세서 초안 작성",
+      "dueDate": "2026-11-29",
+      "status": "진행 중",
+      "description": "팀 프로젝트의 기능·비기능 요구사항을 식별하고 우선순위 기준을 정리합니다.",
+      "priority": "보통"
+    },
+    {
+      "id": "task-8",
+      "courseId": "course-4",
+      "title": "유스케이스 및 시퀀스 다이어그램 설계",
+      "dueDate": "2026-12-01",
+      "status": "시작 전",
+      "description": "핵심 사용자 시나리오 3가지를 선정해 유스케이스와 시퀀스 다이어그램을 작성합니다.",
+      "priority": "보통"
+    },
+    {
+      "id": "task-9",
+      "courseId": "course-1",
+      "title": "그래프 최단 경로 탐색 구현",
+      "dueDate": "2026-12-03",
+      "status": "시작 전",
+      "description": "우선순위 큐를 활용한 다익스트라 알고리즘으로 최단 경로와 비용을 계산합니다.",
+      "priority": "낮음"
+    }
+  ],
+  "questions": [
+    {
+      "id": "question-1",
+      "courseId": "course-1",
+      "title": "AVL 트리의 회전 조건 정리",
+      "content": "균형 인수가 2 또는 -2가 될 때 좌우 회전(LR)과 우좌 회전(RL)이 발생하는 조건이 헷갈립니다.",
+      "status": "시작 전",
+      "createdAt": "2026-11-22"
+    },
+    {
+      "id": "question-2",
+      "courseId": "course-2",
+      "title": "세마포어와 뮤텍스의 차이점",
+      "content": "이진 세마포어와 뮤텍스가 실제 커널 구현에서 소유권 개념으로 어떻게 구분되는지 궁금합니다.",
+      "status": "진행 중",
+      "createdAt": "2026-11-21"
+    },
+    {
+      "id": "question-3",
+      "courseId": "course-3",
+      "title": "B+ 트리 인덱스에서 범위 검색이 빠른 이유",
+      "content": "B 트리와 비교했을 때 B+ 트리가 BETWEEN 같은 범위 조건 조회에서 유리한 구조적 이유가 무엇인가요?",
+      "status": "완료",
+      "createdAt": "2026-11-18",
+      "answer": "B+ 트리는 모든 데이터 포인터가 리프 노드에 모여 있고 리프 노드끼리 연결 리스트로 이어져 있어 순차 탐색이 빠릅니다."
+    },
+    {
+      "id": "question-4",
+      "courseId": "course-4",
+      "title": "애자일 스프린트 회고 작성 기준",
+      "content": "KPT 회고에서 Problem과 Try 항목을 실행 가능한 단위로 나누는 좋은 기준이 있을까요?",
+      "status": "시작 전",
+      "createdAt": "2026-11-23"
+    },
+    {
+      "id": "question-5",
+      "courseId": "course-2",
+      "title": "페이지 교체 알고리즘 LRU 구현 방식",
+      "content": "하드웨어 비용 때문에 완전한 LRU 대신 근사 LRU(Clock 알고리즘)를 사용하는 이유가 궁금합니다.",
+      "status": "진행 중",
+      "createdAt": "2026-11-20"
+    },
+    {
+      "id": "question-6",
+      "courseId": "course-1",
+      "title": "해시 충돌 해결 기법별 시간 복잡도",
+      "content": "체이닝과 개방 주소법에서 적재율이 높아질수록 탐색 성능이 어떻게 달라지나요?",
+      "status": "완료",
+      "createdAt": "2026-11-17",
+      "answer": "개방 주소법은 적재율이 높아질수록 군집 현상으로 성능이 급격히 저하되며, 체이닝은 버킷 평균 길이에 비례해 비교적 완만하게 증가합니다."
+    }
+  ]
+}

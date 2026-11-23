@@ -4,8 +4,12 @@
 dist/
 build/
 .next/
+out/
 *.log
 .env
-.env.local
+.env*
+agent_role.md
+*.tsbuildinfo
+next-env.d.ts
 .DS_Store
 .vscode/
